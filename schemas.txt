@@ -1,0 +1,1414 @@
+CREATE TABLE IF NOT EXISTS chaashto
+ (
+	aashtocl			Text, 
+	rvindicator			Text NOT NULL, 
+	chkey			Text NOT NULL, 
+	chaashtokey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS chconsistence
+ (
+	rupresblkmst			Text, 
+	rupresblkdry			Text, 
+	rupresblkcem			Text, 
+	rupresplate			Text, 
+	mannerfailure			Text, 
+	stickiness			Text, 
+	plasticity			Text, 
+	rvindicator			Text NOT NULL, 
+	chkey			Text NOT NULL, 
+	chconsistkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS chdesgnsuffix
+ (
+	desgnsuffix			Text, 
+	chkey			Text NOT NULL, 
+	chdesgnsfxkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS chfrags
+ (
+	fragvol_l			Integer, 
+	fragvol_r			Integer, 
+	fragvol_h			Integer, 
+	fragkind			Text, 
+	fragsize_l			Integer, 
+	fragsize_r			Integer, 
+	fragsize_h			Integer, 
+	fragshp			Text, 
+	fraground			Text, 
+	fraghard			Text, 
+	chkey			Text NOT NULL, 
+	chfragskey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS chpores
+ (
+	poreqty_l			Real, 
+	poreqty_r			Real, 
+	poreqty_h			Real, 
+	poresize			Text, 
+	porecont			Text, 
+	poreshp			Text, 
+	rvindicator			Text NOT NULL, 
+	chkey			Text NOT NULL, 
+	chporeskey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS chstruct
+ (
+	structgrade			Text, 
+	structsize			Text, 
+	structtype			Text, 
+	structid			Integer, 
+	structpartsto			Integer, 
+	chstructgrpkey			Text NOT NULL, 
+	chstructkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS chstructgrp
+ (
+	structgrpname			Text, 
+	rvindicator			Text NOT NULL, 
+	chkey			Text NOT NULL, 
+	chstructgrpkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS chtext
+ (
+	recdate			DateTime, 
+	chorizontextkind			Text, 
+	textcat			Text, 
+	textsubcat			Text, 
+	text			Text, 
+	chkey			Text NOT NULL, 
+	chtextkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS chtexture
+ (
+	texcl			Text, 
+	lieutex			Text, 
+	chtgkey			Text NOT NULL, 
+	chtkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS chtexturemod
+ (
+	texmod			Text, 
+	chtkey			Text NOT NULL, 
+	chtexmodkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS chunified
+ (
+	unifiedcl			Text, 
+	rvindicator			Text NOT NULL, 
+	chkey			Text NOT NULL, 
+	chunifiedkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS cocanopycover
+ (
+	plantcov			Integer, 
+	plantsym			Text NOT NULL, 
+	plantsciname			Text, 
+	plantcomname			Text, 
+	cokey			Text NOT NULL, 
+	cocanopycovkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS cocropyld
+ (
+	cropname			Text, 
+	yldunits			Text, 
+	nonirryield_l			Real, 
+	nonirryield_r			Real, 
+	nonirryield_h			Real, 
+	irryield_l			Real, 
+	irryield_r			Real, 
+	irryield_h			Real, 
+	cropprodindex			Integer, 
+	vasoiprdgrp			Text, 
+	cokey			Text NOT NULL, 
+	cocropyldkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS codiagfeatures
+ (
+	featkind			Text, 
+	featdept_l			Integer, 
+	featdept_r			Integer, 
+	featdept_h			Integer, 
+	featdepb_l			Integer, 
+	featdepb_r			Integer, 
+	featdepb_h			Integer, 
+	featthick_l			Integer, 
+	featthick_r			Integer, 
+	featthick_h			Integer, 
+	cokey			Text NOT NULL, 
+	codiagfeatkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS coecoclass
+ (
+	ecoclasstypename			Text NOT NULL, 
+	ecoclassref			Text, 
+	ecoclassid			Text NOT NULL, 
+	ecoclassname			Text, 
+	cokey			Text NOT NULL, 
+	coecoclasskey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS coerosionacc
+ (
+	erokind			Text, 
+	rvindicator			Text NOT NULL, 
+	cokey			Text NOT NULL, 
+	coeroacckey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS coforprod
+ (
+	plantsym			Text NOT NULL, 
+	plantsciname			Text, 
+	plantcomname			Text, 
+	siteindexbase			Text, 
+	siteindex_l			Integer, 
+	siteindex_r			Integer, 
+	siteindex_h			Integer, 
+	fprod_l			Real, 
+	fprod_r			Real, 
+	fprod_h			Real, 
+	cokey			Text NOT NULL, 
+	cofprodkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS coforprodo
+ (
+	siteindexbase			Text, 
+	siteindex_l			Integer, 
+	siteindex_r			Integer, 
+	siteindex_h			Integer, 
+	fprod_l			Real, 
+	fprod_r			Real, 
+	fprod_h			Real, 
+	fprodunits			Text, 
+	cofprodkey			Text NOT NULL, 
+	cofprodokey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS cogeomordesc
+ (
+	geomftname			Text NOT NULL, 
+	geomfname			Text NOT NULL, 
+	geomfmod			Text, 
+	geomfeatid			Integer, 
+	existsonfeat			Integer, 
+	rvindicator			Text NOT NULL, 
+	cokey			Text NOT NULL, 
+	cogeomdkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS cohydriccriteria
+ (
+	hydriccriterion			Text, 
+	cokey			Text NOT NULL, 
+	cohydcritkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS comonth
+ (
+	monthseq			Integer, 
+	month			Text, 
+	flodfreqcl			Text, 
+	floddurcl			Text, 
+	pondfreqcl			Text, 
+	ponddurcl			Text, 
+	ponddep_l			Integer, 
+	ponddep_r			Integer, 
+	ponddep_h			Integer, 
+	dlyavgprecip_l			Integer, 
+	dlyavgprecip_r			Integer, 
+	dlyavgprecip_h			Integer, 
+	dlyavgpotet_l			Integer, 
+	dlyavgpotet_r			Integer, 
+	dlyavgpotet_h			Integer, 
+	cokey			Text NOT NULL, 
+	comonthkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS component
+ (
+	comppct_l			Integer, 
+	comppct_r			Integer, 
+	comppct_h			Integer, 
+	compname			Text, 
+	compkind			Text, 
+	majcompflag			Text, 
+	otherph			Text, 
+	localphase			Text, 
+	slope_l			Real, 
+	slope_r			Real, 
+	slope_h			Real, 
+	slopelenusle_l			Integer, 
+	slopelenusle_r			Integer, 
+	slopelenusle_h			Integer, 
+	runoff			Text, 
+	tfact			Integer, 
+	wei			Text, 
+	weg			Text, 
+	erocl			Text, 
+	earthcovkind1			Text, 
+	earthcovkind2			Text, 
+	hydricon			Text, 
+	hydricrating			Text, 
+	drainagecl			Text, 
+	elev_l			Real, 
+	elev_r			Real, 
+	elev_h			Real, 
+	aspectccwise			Integer, 
+	aspectrep			Integer, 
+	aspectcwise			Integer, 
+	geomdesc			Text, 
+	albedodry_l			Real, 
+	albedodry_r			Real, 
+	albedodry_h			Real, 
+	airtempa_l			Real, 
+	airtempa_r			Real, 
+	airtempa_h			Real, 
+	map_l			Integer, 
+	map_r			Integer, 
+	map_h			Integer, 
+	reannualprecip_l			Integer, 
+	reannualprecip_r			Integer, 
+	reannualprecip_h			Integer, 
+	ffd_l			Integer, 
+	ffd_r			Integer, 
+	ffd_h			Integer, 
+	nirrcapcl			Text, 
+	nirrcapscl			Text, 
+	nirrcapunit			Integer, 
+	irrcapcl			Text, 
+	irrcapscl			Text, 
+	irrcapunit			Integer, 
+	cropprodindex			Integer, 
+	constreeshrubgrp			Text, 
+	wndbrksuitgrp			Text, 
+	rsprod_l			Integer, 
+	rsprod_r			Integer, 
+	rsprod_h			Integer, 
+	foragesuitgrpid			Text, 
+	wlgrain			Text, 
+	wlgrass			Text, 
+	wlherbaceous			Text, 
+	wlshrub			Text, 
+	wlconiferous			Text, 
+	wlhardwood			Text, 
+	wlwetplant			Text, 
+	wlshallowwat			Text, 
+	wlrangeland			Text, 
+	wlopenland			Text, 
+	wlwoodland			Text, 
+	wlwetland			Text, 
+	soilslippot			Text, 
+	frostact			Text, 
+	initsub_l			Integer, 
+	initsub_r			Integer, 
+	initsub_h			Integer, 
+	totalsub_l			Integer, 
+	totalsub_r			Integer, 
+	totalsub_h			Integer, 
+	hydgrp			Text, 
+	corcon			Text, 
+	corsteel			Text, 
+	taxclname			Text, 
+	taxorder			Text, 
+	taxsuborder			Text, 
+	taxgrtgroup			Text, 
+	taxsubgrp			Text, 
+	taxpartsize			Text, 
+	taxpartsizemod			Text, 
+	taxceactcl			Text, 
+	taxreaction			Text, 
+	taxtempcl			Text, 
+	taxmoistscl			Text, 
+	taxtempregime			Text, 
+	soiltaxedition			Text, 
+	castorieindex			Integer, 
+	flecolcomnum			Text, 
+	flhe			Text, 
+	flphe			Text, 
+	flsoilleachpot			Text, 
+	flsoirunoffpot			Text, 
+	fltemik2use			Text, 
+	fltriumph2use			Text, 
+	indraingrp			Text, 
+	innitrateleachi			Integer, 
+	misoimgmtgrp			Text, 
+	vasoimgtgrp			Text, 
+	mukey			Text NOT NULL, 
+	cokey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS copm
+ (
+	pmorder			Integer, 
+	pmmodifier			Text, 
+	pmgenmod			Text, 
+	pmkind			Text, 
+	pmorigin			Text, 
+	copmgrpkey			Text NOT NULL, 
+	copmkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS copmgrp
+ (
+	pmgroupname			Text, 
+	rvindicator			Text NOT NULL, 
+	cokey			Text NOT NULL, 
+	copmgrpkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS copwindbreak
+ (
+	wndbrkht_l			Real, 
+	wndbrkht_r			Real, 
+	wndbrkht_h			Real, 
+	plantsym			Text NOT NULL, 
+	plantsciname			Text, 
+	plantcomname			Text, 
+	cokey			Text NOT NULL, 
+	copwindbreakkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS corestrictions
+ (
+	reskind			Text, 
+	reshard			Text, 
+	resdept_l			Integer, 
+	resdept_r			Integer, 
+	resdept_h			Integer, 
+	resdepb_l			Integer, 
+	resdepb_r			Integer, 
+	resdepb_h			Integer, 
+	resthk_l			Integer, 
+	resthk_r			Integer, 
+	resthk_h			Integer, 
+	cokey			Text NOT NULL, 
+	corestrictkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS cosoilmoist
+ (
+	soimoistdept_l			Integer, 
+	soimoistdept_r			Integer, 
+	soimoistdept_h			Integer, 
+	soimoistdepb_l			Integer, 
+	soimoistdepb_r			Integer, 
+	soimoistdepb_h			Integer, 
+	soimoiststat			Text, 
+	comonthkey			Text NOT NULL, 
+	cosoilmoistkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS cosurffrags
+ (
+	sfragcov_l			Real, 
+	sfragcov_r			Real, 
+	sfragcov_h			Real, 
+	distrocks_l			Real, 
+	distrocks_r			Real, 
+	distrocks_h			Real, 
+	sfragkind			Text, 
+	sfragsize_l			Integer, 
+	sfragsize_r			Integer, 
+	sfragsize_h			Integer, 
+	sfragshp			Text, 
+	sfraground			Text, 
+	sfraghard			Text, 
+	cokey			Text NOT NULL, 
+	cosurffragskey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS cosurfmorphgc
+ (
+	geomposmntn			Text, 
+	geomposhill			Text, 
+	geompostrce			Text, 
+	geomposflats			Text, 
+	cogeomdkey			Text NOT NULL, 
+	cosurfmorgckey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS cosurfmorphhpp
+ (
+	hillslopeprof			Text, 
+	cogeomdkey			Text NOT NULL, 
+	cosurfmorhppkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS cosurfmorphmr
+ (
+	geomicrorelief			Text, 
+	cogeomdkey			Text NOT NULL, 
+	cosurfmormrkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS cosurfmorphss
+ (
+	shapeacross			Text, 
+	shapedown			Text, 
+	cogeomdkey			Text NOT NULL, 
+	cosurfmorsskey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS cotaxmoistcl
+ (
+	taxmoistcl			Text, 
+	cokey			Text NOT NULL, 
+	cotaxmckey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS cotext
+ (
+	recdate			DateTime, 
+	comptextkind			Text, 
+	textcat			Text, 
+	textsubcat			Text, 
+	text			Text, 
+	cokey			Text NOT NULL, 
+	cotextkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS cotreestomng
+ (
+	plantsym			Text NOT NULL, 
+	plantsciname			Text, 
+	plantcomname			Text, 
+	cokey			Text NOT NULL, 
+	cotreestomngkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS cotxfmother
+ (
+	taxfamother			Text, 
+	cokey			Text NOT NULL, 
+	cotaxfokey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS distinterpmd
+ (
+	rulename			Text, 
+	ruledesign			Text NOT NULL, 
+	ruledesc			Text, 
+	dataafuse			Text, 
+	mrecentrulecwlu			DateTime, 
+	rulekey			Text NOT NULL, 
+	distmdkey			Text NOT NULL, 
+	distinterpmdkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS distlegendmd
+ (
+	areatypename			Text, 
+	areasymbol			Text, 
+	areaname			Text, 
+	ssastatus			Text, 
+	cordate			DateTime, 
+	exportcertstatus			Text, 
+	exportcertdate			DateTime, 
+	exportmetadata			Text, 
+	lkey			Text NOT NULL, 
+	distmdkey			Text NOT NULL, 
+	distlegendmdkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS featdesc
+ (
+	areasymbol			Text NOT NULL, 
+	spatialversion			Integer NOT NULL, 
+	featsym			Text NOT NULL, 
+	featname			Text NOT NULL, 
+	featdesc			Text NOT NULL, 
+	featkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS laoverlap
+ (
+	areatypename			Text NOT NULL, 
+	areasymbol			Text NOT NULL, 
+	areaname			Text, 
+	areaovacres			Integer, 
+	lkey			Text NOT NULL, 
+	lareaovkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS legend
+ (
+	areatypename			Text NOT NULL, 
+	areasymbol			Text NOT NULL, 
+	areaname			Text, 
+	areaacres			Integer, 
+	mlraoffice			Text, 
+	legenddesc			Text, 
+	ssastatus			Text, 
+	mouagncyresp			Text, 
+	projectscale			Integer, 
+	cordate			DateTime, 
+	ssurgoarchived			DateTime, 
+	legendsuituse			Text, 
+	legendcertstat			Text, 
+	lkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS legendtext
+ (
+	recdate			DateTime, 
+	legendtextkind			Text, 
+	textcat			Text, 
+	textsubcat			Text, 
+	text			Text, 
+	lkey			Text NOT NULL, 
+	legtextkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS mapunit
+ (
+	musym			Text NOT NULL, 
+	muname			Text, 
+	mukind			Text, 
+	mustatus			Text, 
+	muacres			Integer, 
+	mapunitlfw_l			Integer, 
+	mapunitlfw_r			Integer, 
+	mapunitlfw_h			Integer, 
+	mapunitpfa_l			Real, 
+	mapunitpfa_r			Real, 
+	mapunitpfa_h			Real, 
+	farmlndcl			Text, 
+	muhelcl			Text, 
+	muwathelcl			Text, 
+	muwndhelcl			Text, 
+	interpfocus			Text, 
+	invesintens			Text, 
+	iacornsr			Integer, 
+	nhiforsoigrp			Text, 
+	nhspiagr			Real, 
+	vtsepticsyscl			Text, 
+	mucertstat			Text, 
+	lkey			Text NOT NULL, 
+	mukey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS mdstatdomdet
+ (
+	domainname			Text NOT NULL, 
+	choicesequence			Integer NOT NULL, 
+	choice			Text NOT NULL, 
+	choicedesc			Text, 
+	choiceobsolete			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS mdstatdommas
+ (
+	domainname			Text NOT NULL, 
+	domainmaxlen			Integer NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS mdstatidxdet
+ (
+	tabphyname			Text NOT NULL, 
+	idxphyname			Text NOT NULL, 
+	idxcolsequence			Integer NOT NULL, 
+	colphyname			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS mdstatidxmas
+ (
+	tabphyname			Text NOT NULL, 
+	idxphyname			Text NOT NULL, 
+	uniqueindex			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS mdstatrshipdet
+ (
+	ltabphyname			Text NOT NULL, 
+	rtabphyname			Text NOT NULL, 
+	relationshipname			Text NOT NULL, 
+	ltabcolphyname			Text NOT NULL, 
+	rtabcolphyname			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS mdstattabcols
+ (
+	tabphyname			Text NOT NULL, 
+	colsequence			Integer NOT NULL, 
+	colphyname			Text NOT NULL, 
+	collogname			Text NOT NULL, 
+	collabel			Text NOT NULL, 
+	logicaldatatype			Text NOT NULL, 
+	not_null			Text NOT NULL,
+	fieldsize			Integer, 
+	precision			Integer, 
+	minimum			Real, 
+	maximum			Real, 
+	uom			Text, 
+	domainname			Text, 
+	coldesc			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS mdstattabs
+ (
+	tabphyname			Text NOT NULL, 
+	tablogname			Text NOT NULL, 
+	tablabel			Text NOT NULL, 
+	tabdesc			Text NOT NULL, 
+	iefilename			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS month
+ (
+	monthseq			Integer NOT NULL, 
+	monthname			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS muaggatt
+ (
+	musym			Text NOT NULL, 
+	muname			Text, 
+	mustatus			Text, 
+	slopegraddcp			Real, 
+	slopegradwta			Real, 
+	brockdepmin			Integer, 
+	wtdepannmin			Integer, 
+	wtdepaprjunmin			Integer, 
+	flodfreqdcd			Text, 
+	flodfreqmax			Text, 
+	pondfreqprs			Text, 
+	aws025wta			Real, 
+	aws050wta			Real, 
+	aws0100wta			Real, 
+	aws0150wta			Real, 
+	drclassdcd			Text, 
+	drclasswettest			Text, 
+	hydgrpdcd			Text, 
+	iccdcd			Text, 
+	iccdcdpct			Integer, 
+	niccdcd			Text, 
+	niccdcdpct			Integer, 
+	engdwobdcd			Text, 
+	engdwbdcd			Text, 
+	engdwbll			Text, 
+	engdwbml			Text, 
+	engstafdcd			Text, 
+	engstafll			Text, 
+	engstafml			Text, 
+	engsldcd			Text, 
+	engsldcp			Text, 
+	englrsdcd			Text, 
+	engcmssdcd			Text, 
+	engcmssmp			Text, 
+	urbrecptdcd			Text, 
+	urbrecptwta			Real, 
+	forpehrtdcp			Text, 
+	hydclprs			Text, 
+	awmmfpwwta			Real, 
+	mukey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS muaoverlap
+ (
+	areaovacres			Integer, 
+	lareaovkey			Text NOT NULL, 
+	mukey			Text NOT NULL, 
+	muareaovkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS mucropyld
+ (
+	cropname			Text, 
+	yldunits			Text, 
+	nonirryield_l			Real, 
+	nonirryield_r			Real, 
+	nonirryield_h			Real, 
+	irryield_l			Real, 
+	irryield_r			Real, 
+	irryield_h			Real, 
+	mukey			Text NOT NULL, 
+	mucrpyldkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS mutext
+ (
+	recdate			DateTime, 
+	mapunittextkind			Text, 
+	textcat			Text, 
+	textsubcat			Text, 
+	text			Text, 
+	mukey			Text NOT NULL, 
+	mutextkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS sainterp
+ (
+	areasymbol			Text NOT NULL, 
+	interpname			Text NOT NULL, 
+	interptype			Text NOT NULL, 
+	interpdesc			Text, 
+	interpdesigndate			DateTime NOT NULL, 
+	interpgendate			DateTime NOT NULL, 
+	interpmaxreasons			Integer, 
+	sacatalogkey			Text NOT NULL, 
+	sainterpkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS sdvalgorithm
+ (
+	algorithmsequence			Integer NOT NULL, 
+	algorithmname			Text NOT NULL, 
+	algorithminitials			Text NOT NULL, 
+	algorithmdescription			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS sdvattribute
+ (
+	attributekey			Integer NOT NULL, 
+	attributename			Text NOT NULL, 
+	attributetablename			Text NOT NULL, 
+	attributecolumnname			Text NOT NULL, 
+	attributelogicaldatatype			Text NOT NULL, 
+	attributefieldsize			Integer, 
+	attributeprecision			Integer, 
+	attributedescription			Text NOT NULL, 
+	attributeuom			Text, 
+	attributeuomabbrev			Text, 
+	attributetype			Text NOT NULL, 
+	nasisrulename			Text, 
+	ruledesign			Integer, 
+	notratedphrase			Text, 
+	mapunitlevelattribflag			Integer NOT NULL, 
+	complevelattribflag			Integer NOT NULL, 
+	cmonthlevelattribflag			Integer NOT NULL, 
+	horzlevelattribflag			Integer NOT NULL, 
+	tiebreakdomainname			Text, 
+	tiebreakruleoptionflag			Integer NOT NULL, 
+	tiebreaklowlabel			Text, 
+	tiebreakhighlabel			Text, 
+	tiebreakrule			Integer NOT NULL, 
+	resultcolumnname			Text NOT NULL, 
+	sqlwhereclause			Text, 
+	primaryconcolname			Text, 
+	pcclogicaldatatype			Text, 
+	primaryconstraintlabel			Text, 
+	secondaryconcolname			Text, 
+	scclogicaldatatype			Text, 
+	secondaryconstraintlabel			Text, 
+	dqmodeoptionflag			Integer NOT NULL, 
+	depthqualifiermode			Text, 
+	layerdepthtotop			Real, 
+	layerdepthtobottom			Real, 
+	layerdepthuom			Text, 
+	monthrangeoptionflag			Integer NOT NULL, 
+	beginningmonth			Text, 
+	endingmonth			Text, 
+	horzaggmeth			Text, 
+	interpnullsaszerooptionflag			Integer NOT NULL, 
+	interpnullsaszeroflag			Integer NOT NULL, 
+	nullratingreplacementvalue			Text, 
+	basicmodeflag			Integer NOT NULL, 
+	maplegendkey			Integer NOT NULL, 
+	maplegendclasses			Integer, 
+	maplegendxml			Text NOT NULL, 
+	nasissiteid			Integer NOT NULL, 
+	wlupdated			DateTime NOT NULL, 
+	algorithmname			Text NOT NULL, 
+	componentpercentcutoff			Integer, 
+	readytodistribute			Integer NOT NULL, 
+	effectivelogicaldatatype			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS sdvfolder
+ (
+	foldersequence			Integer NOT NULL, 
+	foldername			Text NOT NULL, 
+	folderdescription			Text NOT NULL, 
+	folderkey			Integer NOT NULL, 
+	parentfolderkey			Integer, 
+	wlupdated			DateTime NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS sdvfolderattribute
+ (
+	folderkey			Integer NOT NULL, 
+	attributekey			Integer NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_FSACRP_Warnings_and_Rejects
+ (
+	areasymbol			Text, 
+	areaname			Text, 
+	musym			Text, 
+	muname			Text, 
+	mustatus			Text, 
+	message			Text
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_Geomorphic_Feature
+ (
+	seqnum			Integer, 
+	geomfname			Text NOT NULL, 
+	geomfnamep			Text, 
+	geomfdesc			Text, 
+	obterm			Boolean NOT NULL, 
+	fieldcode			Text, 
+	geomftiidref			Integer NOT NULL, 
+	geomfiid			Integer NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_Geomorphic_Feature_Type
+ (
+	geomftname			Text NOT NULL, 
+	geomftdesc			Text, 
+	obterm			Boolean NOT NULL, 
+	fieldcode			Text, 
+	geomftiid			Integer NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_Help_Text
+ (
+	HelpTextKey			Text, 
+	HelpText			Text
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_Interp_Depth_Sequence
+ (
+	cointerpkey			Text NOT NULL, 
+	depthseq			Integer
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_Leaf_Pine_Counties
+ (
+	countycode			Text, 
+	statename			Text, 
+	countyname			Text
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_Mapunit_Sort_Specifications
+ (
+	lseq			Integer NOT NULL, 
+	museq			Integer NOT NULL, 
+	lkey			Text NOT NULL, 
+	mukey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_Palouse_Soil_Survey_Areas
+ (
+	STSSAID			Text
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_Report_Parameters_Crops
+ (
+	Crop_Sequence			Integer, 
+	Crop_Name			Text, 
+	Yield_Units			Text
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_Report_Parameters_Interpretations
+ (
+	Interpretation_Name			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_Report_Parameters_Map_Unit_Description_Categories
+ (
+	Map_Unit_Description_Category_Sequence			Integer, 
+	Map_Unit_Description_Category_Name			Text
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_Report_Parameters_Text_Kinds_and_Categories
+ (
+	Text_Kind_and_Category_Sequence			Integer, 
+	Text_Kind_and_Category			Text
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_Sample_Soil_Polygon_Attribute_Table
+ (
+	AREA			Real, 
+	PERIMETER			Real, 
+	MUSYM			Text, 
+	MUKEY			Text
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_sdvalgorithm
+ (
+	algorithmsequence			Integer NOT NULL, 
+	algorithmname			Text NOT NULL, 
+	algorithminitials			Text NOT NULL, 
+	algorithmdescription			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_sdvattribute
+ (
+	attributekey			Integer NOT NULL, 
+	attributename			Text NOT NULL, 
+	attributetablename			Text NOT NULL, 
+	attributecolumnname			Text NOT NULL, 
+	attributelogicaldatatype			Text NOT NULL, 
+	attributefieldsize			Integer, 
+	attributeprecision			Integer, 
+	attributedescription			Text NOT NULL, 
+	attributeuom			Text, 
+	attributeuomabbrev			Text, 
+	attributetype			Text NOT NULL, 
+	nasisrulename			Text, 
+	ruledesign			Integer, 
+	notratedphrase			Text, 
+	mapunitlevelattribflag			Integer NOT NULL, 
+	complevelattribflag			Integer NOT NULL, 
+	cmonthlevelattribflag			Integer NOT NULL, 
+	horzlevelattribflag			Integer NOT NULL, 
+	tiebreakdomainname			Text, 
+	tiebreakruleoptionflag			Integer NOT NULL, 
+	tiebreaklowlabel			Text, 
+	tiebreakhighlabel			Text, 
+	tiebreakrule			Integer NOT NULL, 
+	resultcolumnname			Text NOT NULL, 
+	sqlwhereclause			Text, 
+	primaryconcolname			Text, 
+	pcclogicaldatatype			Text, 
+	primaryconstraintlabel			Text, 
+	secondaryconcolname			Text, 
+	scclogicaldatatype			Text, 
+	secondaryconstraintlabel			Text, 
+	dqmodeoptionflag			Integer NOT NULL, 
+	depthqualifiermode			Text, 
+	layerdepthtotop			Real, 
+	layerdepthtobottom			Real, 
+	layerdepthuom			Text, 
+	monthrangeoptionflag			Integer NOT NULL, 
+	beginningmonth			Text, 
+	endingmonth			Text, 
+	horzaggmeth			Text, 
+	interpnullsaszerooptionflag			Integer NOT NULL, 
+	interpnullsaszeroflag			Integer NOT NULL, 
+	nullratingreplacementvalue			Text, 
+	basicmodeflag			Integer NOT NULL, 
+	maplegendkey			Integer NOT NULL, 
+	maplegendclasses			Integer, 
+	maplegendxml			Text NOT NULL, 
+	nasissiteid			Integer NOT NULL, 
+	wlupdated			DateTime NOT NULL, 
+	algorithmname			Text NOT NULL, 
+	componentpercentcutoff			Integer, 
+	readytodistribute			Integer NOT NULL, 
+	effectivelogicaldatatype			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_sdvfolder
+ (
+	foldersequence			Integer NOT NULL, 
+	foldername			Text NOT NULL, 
+	folderdescription			Text NOT NULL, 
+	folderkey			Integer NOT NULL, 
+	parentfolderkey			Integer, 
+	wlupdated			DateTime NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_sdvfolderattribute
+ (
+	folderkey			Integer NOT NULL, 
+	attributekey			Integer NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_Selected_Legend_Key
+ (
+	lkey			Text
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_Selected_Mapunit_Keys
+ (
+	mukey			Text
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_Soil_Reports_Interpretations
+ (
+	Report_Key			Integer NOT NULL, 
+	Rule_Name			Text NOT NULL, 
+	Rule_Sequence			Integer NOT NULL, 
+	Rule_Title			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_Soil_Survey_Area
+ (
+	Area_Symbol			Text, 
+	Area_Name			Text, 
+	Legend_Key			Integer
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_Survey_AreaCounty_Geographic_Coincidence
+ (
+	stcoid			Text, 
+	stssaid			Text
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_System_Reports
+ (
+	Report_Key			Integer, 
+	Report_Sequence			Integer, 
+	Report_Name			Text, 
+	Access_Report_Name			Text, 
+	Parameters_Required			Boolean NOT NULL, 
+	Access_Parameter_Form_Name			Text, 
+	Maximum_Number_of_Parameters			Integer, 
+	Include_Report			Boolean NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_Template_Database_Information
+ (
+	Item_Name			Text NOT NULL, 
+	Item_Sequence			Integer NOT NULL, 
+	Item_Value			Text, 
+	Item_Narrative			Text
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_WinPst_Data
+ (
+	state			Text, 
+	ssaid			Text, 
+	ssaname			Text, 
+	musym			Text, 
+	seqnum			Integer, 
+	compname			Text, 
+	surftex			Text, 
+	comppct			Integer, 
+	slopel			Integer, 
+	slopeh			Integer, 
+	wtdepl			Real, 
+	wtdeph			Real, 
+	wtkind			Text, 
+	wtbeg			Text, 
+	wtend			Text, 
+	hydgrp			Text, 
+	laydeph			Integer, 
+	kfact			Real, 
+	oml			Real, 
+	omr			Real, 
+	omh			Real, 
+	rockdepl			Integer, 
+	rockdeph			Integer, 
+	phl			Real, 
+	phh			Real, 
+	shrinksw			Text, 
+	slopegt15			Integer, 
+	hwtlte2			Integer
+);
+
+CREATE TABLE IF NOT EXISTS chorizon
+ (
+	hzname			Text, 
+	desgndisc			Integer, 
+	desgnmaster			Text, 
+	desgnmasterprime			Text, 
+	desgnvert			Integer, 
+	hzdept_l			Integer, 
+	hzdept_r			Integer, 
+	hzdept_h			Integer, 
+	hzdepb_l			Integer, 
+	hzdepb_r			Integer, 
+	hzdepb_h			Integer, 
+	hzthk_l			Integer, 
+	hzthk_r			Integer, 
+	hzthk_h			Integer, 
+	fraggt10_l			Integer, 
+	fraggt10_r			Integer, 
+	fraggt10_h			Integer, 
+	frag3to10_l			Integer, 
+	frag3to10_r			Integer, 
+	frag3to10_h			Integer, 
+	sieveno4_l			Real, 
+	sieveno4_r			Real, 
+	sieveno4_h			Real, 
+	sieveno10_l			Real, 
+	sieveno10_r			Real, 
+	sieveno10_h			Real, 
+	sieveno40_l			Real, 
+	sieveno40_r			Real, 
+	sieveno40_h			Real, 
+	sieveno200_l			Real, 
+	sieveno200_r			Real, 
+	sieveno200_h			Real, 
+	sandtotal_l			Real, 
+	sandtotal_r			Real, 
+	sandtotal_h			Real, 
+	sandvc_l			Real, 
+	sandvc_r			Real, 
+	sandvc_h			Real, 
+	sandco_l			Real, 
+	sandco_r			Real, 
+	sandco_h			Real, 
+	sandmed_l			Real, 
+	sandmed_r			Real, 
+	sandmed_h			Real, 
+	sandfine_l			Real, 
+	sandfine_r			Real, 
+	sandfine_h			Real, 
+	sandvf_l			Real, 
+	sandvf_r			Real, 
+	sandvf_h			Real, 
+	silttotal_l			Real, 
+	silttotal_r			Real, 
+	silttotal_h			Real, 
+	siltco_l			Real, 
+	siltco_r			Real, 
+	siltco_h			Real, 
+	siltfine_l			Real, 
+	siltfine_r			Real, 
+	siltfine_h			Real, 
+	claytotal_l			Real, 
+	claytotal_r			Real, 
+	claytotal_h			Real, 
+	claysizedcarb_l			Real, 
+	claysizedcarb_r			Real, 
+	claysizedcarb_h			Real, 
+	om_l			Real, 
+	om_r			Real, 
+	om_h			Real, 
+	dbtenthbar_l			Real, 
+	dbtenthbar_r			Real, 
+	dbtenthbar_h			Real, 
+	dbthirdbar_l			Real, 
+	dbthirdbar_r			Real, 
+	dbthirdbar_h			Real, 
+	dbfifteenbar_l			Real, 
+	dbfifteenbar_r			Real, 
+	dbfifteenbar_h			Real, 
+	dbovendry_l			Real, 
+	dbovendry_r			Real, 
+	dbovendry_h			Real, 
+	partdensity			Real, 
+	ksat_l			Real, 
+	ksat_r			Real, 
+	ksat_h			Real, 
+	awc_l			Real, 
+	awc_r			Real, 
+	awc_h			Real, 
+	wtenthbar_l			Real, 
+	wtenthbar_r			Real, 
+	wtenthbar_h			Real, 
+	wthirdbar_l			Real, 
+	wthirdbar_r			Real, 
+	wthirdbar_h			Real, 
+	wfifteenbar_l			Real, 
+	wfifteenbar_r			Real, 
+	wfifteenbar_h			Real, 
+	wsatiated_l			Integer, 
+	wsatiated_r			Integer, 
+	wsatiated_h			Integer, 
+	lep_l			Real, 
+	lep_r			Real, 
+	lep_h			Real, 
+	ll_l			Real, 
+	ll_r			Real, 
+	ll_h			Real, 
+	pi_l			Real, 
+	pi_r			Real, 
+	pi_h			Real, 
+	aashind_l			Integer, 
+	aashind_r			Integer, 
+	aashind_h			Integer, 
+	kwfact			Text, 
+	kffact			Text, 
+	caco3_l			Integer, 
+	caco3_r			Integer, 
+	caco3_h			Integer, 
+	gypsum_l			Integer, 
+	gypsum_r			Integer, 
+	gypsum_h			Integer, 
+	sar_l			Real, 
+	sar_r			Real, 
+	sar_h			Real, 
+	ec_l			Real, 
+	ec_r			Real, 
+	ec_h			Real, 
+	cec7_l			Real, 
+	cec7_r			Real, 
+	cec7_h			Real, 
+	ecec_l			Real, 
+	ecec_r			Real, 
+	ecec_h			Real, 
+	sumbases_l			Real, 
+	sumbases_r			Real, 
+	sumbases_h			Real, 
+	ph1to1h2o_l			Real, 
+	ph1to1h2o_r			Real, 
+	ph1to1h2o_h			Real, 
+	ph01mcacl2_l			Real, 
+	ph01mcacl2_r			Real, 
+	ph01mcacl2_h			Real, 
+	freeiron_l			Real, 
+	freeiron_r			Real, 
+	freeiron_h			Real, 
+	feoxalate_l			Real, 
+	feoxalate_r			Real, 
+	feoxalate_h			Real, 
+	extracid_l			Real, 
+	extracid_r			Real, 
+	extracid_h			Real, 
+	extral_l			Real, 
+	extral_r			Real, 
+	extral_h			Real, 
+	aloxalate_l			Real, 
+	aloxalate_r			Real, 
+	aloxalate_h			Real, 
+	pbray1_l			Real, 
+	pbray1_r			Real, 
+	pbray1_h			Real, 
+	poxalate_l			Real, 
+	poxalate_r			Real, 
+	poxalate_h			Real, 
+	ph2osoluble_l			Real, 
+	ph2osoluble_r			Real, 
+	ph2osoluble_h			Real, 
+	ptotal_l			Real, 
+	ptotal_r			Real, 
+	ptotal_h			Real, 
+	excavdifcl			Text, 
+	excavdifms			Text, 
+	cokey			Text NOT NULL, 
+	chkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS chtexturegrp
+ (
+	texture			Text, 
+	stratextsflag			Text NOT NULL, 
+	rvindicator			Text NOT NULL, 
+	texdesc			Text, 
+	chkey			Text NOT NULL, 
+	chtgkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS coeplants
+ (
+	plantsym			Text NOT NULL, 
+	plantsciname			Text, 
+	plantcomname			Text, 
+	forestunprod			Integer, 
+	rangeprod			Integer, 
+	cokey			Text NOT NULL, 
+	coeplantskey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS cointerp
+ (
+	cokey			Text NOT NULL, 
+	mrulekey			Text NOT NULL, 
+	mrulename			Text NOT NULL, 
+	seqnum			Integer NOT NULL, 
+	rulekey			Text NOT NULL, 
+	rulename			Text NOT NULL, 
+	ruledepth			Integer NOT NULL, 
+	interpll			Real, 
+	interpllc			Text, 
+	interplr			Real, 
+	interplrc			Text, 
+	interphr			Real, 
+	interphrc			Text, 
+	interphh			Real, 
+	interphhc			Text, 
+	nullpropdatabool			Text, 
+	defpropdatabool			Text, 
+	incpropdatabool			Text, 
+	cointerpkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS cosoiltemp
+ (
+	soitempmm			Integer, 
+	soitempdept_l			Integer, 
+	soitempdept_r			Integer, 
+	soitempdept_h			Integer, 
+	soitempdepb_l			Integer, 
+	soitempdepb_r			Integer, 
+	soitempdepb_h			Integer, 
+	comonthkey			Text NOT NULL, 
+	cosoiltempkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS cotaxfmmin
+ (
+	taxminalogy			Text, 
+	cokey			Text NOT NULL, 
+	cotaxfmminkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS distmd
+ (
+	distgendate			DateTime, 
+	diststatus			Text NOT NULL, 
+	interpmaxreasons			Integer, 
+	distmdkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS mdstatrshipmas
+ (
+	ltabphyname			Text NOT NULL, 
+	rtabphyname			Text NOT NULL, 
+	relationshipname			Text NOT NULL, 
+	cardinality			Text NOT NULL, 
+	mandatory			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS sacatalog
+ (
+	areasymbol			Text NOT NULL, 
+	areaname			Text NOT NULL, 
+	saversion			Integer NOT NULL, 
+	saverest			DateTime NOT NULL, 
+	tabularversion			Integer NOT NULL, 
+	tabularverest			DateTime NOT NULL, 
+	tabnasisexportdate			DateTime NOT NULL, 
+	tabcertstatus			Text, 
+	tabcertstatusdesc			Text, 
+	fgdcmetadata			Text NOT NULL, 
+	sacatalogkey			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_FSACRP_Data
+ (
+	stcty			Text NOT NULL, 
+	ssaid			Text NOT NULL, 
+	musym			Text NOT NULL, 
+	mu_lleaf			Text, 
+	mu_leach			Integer, 
+	mu_ifactor			Integer, 
+	mu_kfactor			Real, 
+	mu_LS			Real, 
+	mu_tfactor			Integer, 
+	source			Text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_Report_Parameters_Counties_or_Parishes
+ (
+	County_or_Parish_Sequence			Integer, 
+	County_or_Parish_Symbol			Text, 
+	County_or_Parish_Name			Text
+);
+
+CREATE TABLE IF NOT EXISTS SYSTEM_Soil_Reports
+ (
+	Report_Key			Integer, 
+	Report_Sequence			Integer, 
+	Report_Name			Text NOT NULL, 
+	Report_Title			Text NOT NULL, 
+	Report_Header_Text			Text, 
+	Access_Report_Name			Text NOT NULL, 
+	Parameters_Required			Boolean NOT NULL, 
+	Maximum_Number_of_Parameters			Integer, 
+	Access_Parameter_Form_Name			Text, 
+	Report_Parameters_Parameter			Integer, 
+	Include_Report			Boolean NOT NULL, 
+	Map_Unit_Selection_Required			Boolean NOT NULL, 
+	Report_Documentation			Text
+);

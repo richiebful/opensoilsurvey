@@ -1,0 +1,3 @@
+- Use shapefile module to consume data from shapefiles in AL001/spatial 
+and the like
+- Pipeline data into the spatialite database I got
