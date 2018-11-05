@@ -1,8 +1,11 @@
 data/%: data/%.zip
 	unzip data/%.zip
 
-data/%.zip: url-list.txt
+data/%.zip: url-list.txt data
 	wget -nc -i $< -P data
 
-db/soil_survey.db: db/schema.txt
-	sqlite3 $@ < $<
+data:
+	mkdir data
+
+db/soil_survey.db:
+	sqlite3 $@ < db/schema.txt
